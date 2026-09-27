@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnakController;
 use App\Http\Controllers\CobaController;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\MahasiswaController;
@@ -49,3 +50,7 @@ Route::post('/proses-mahasiswa', [MahasiswaController::class, 'prosesMahasiswa']
 Route::get('/form-pelaporan', [PelaporanController::class, 'form']);
 
 Route::post('/proses-pelaporan', [PelaporanController::class, 'proses']);
+
+Route::get('/form-registrasi-anak', [AnakController::class, 'form']);
+
+Route::post('/proses-data-anak', [AnakController::class, 'proses']);
